@@ -28,7 +28,7 @@ jobs:
 
       - name: Run tests
         run: |
-          pytest test_model.py
+          python src/test_model.py
 
       - name: Install AWS CLI
         run: |
