@@ -24,7 +24,7 @@ jobs:
 
       - name: Run training script
         run: |
-          python train_model.py
+          python src/train_model.py  # Update the path if necessary
 
       - name: Run tests
         run: |
