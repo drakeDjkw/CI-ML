@@ -24,17 +24,17 @@ jobs:
 
       - name: Run training script
         run: |
-          python train_model.py
+          python src/train_model.py  # Ensure the path is correct
 
       - name: Run tests
         run: |
-          python test_model.py
+          python src/test_model.py  # Ensure the path is correct
 
       - name: Install or Update AWS CLI
         run: |
           if command -v aws &> /dev/null; then
               echo "AWS CLI already installed. Updating..."
-              sudo aws/install --update
+              sudo ./aws/install --update
           else
               echo "Installing AWS CLI..."
               curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
